@@ -1,0 +1,495 @@
+<div class="animated fadeIn">
+    <cdp-spinner *ngIf="isLoading" [type]="'three-bounce'"></cdp-spinner>
+    <div *ngIf="!isLoading">
+      <div class="animated fadeIn">
+        <tabset #staticTabs>
+          <tab heading="Заявление" id="tab1">
+            <div class="b-wrapper-tab">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="b-text b-text-title">Заявитель (застройщик)</div>
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.pasport?.lastName">
+                    <div class="b-wrapper-title">
+                      Фамилия
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.pasport?.lastName }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.pasport?.firstName">
+                    <div class="b-wrapper-title">
+                      Имя
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.pasport?.firstName }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.pasport?.middleName">
+                    <div class="b-wrapper-title">
+                      Отчество
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.pasport?.middleName }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.pasport?.sex">
+                    <div class="b-wrapper-title">
+                      Пол
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.pasport?.sex }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.pasport?.snils">
+                    <div class="b-wrapper-title">
+                      СНИЛС
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.pasport?.snils }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.orgAddressFact">
+                    <div class="b-wrapper-title">
+                      Фактический адресс
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.orgAddressFact }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.orgPhone">
+                    <div class="b-wrapper-title">
+                      Телефон
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.orgPhone }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataDeclarant?.OrganizationFiz?.orgEmail">
+                    <div class="b-wrapper-title">
+                      Адрес электронной почты
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataDeclarant?.OrganizationFiz?.orgEmail }}
+                    </div>
+                  </div>
+  
+                  <div *ngIf="dataContactPerson">
+                    <div class="b-text b-text-title">Представитель заявителя</div>
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.pasport?.lastName">
+                      <div class="b-wrapper-title">
+                        Фамилия
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{
+                        dataContactPerson?.OrganizationFiz?.pasport?.lastName
+                        }}
+                      </div>
+                    </div>
+  
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.pasport?.firstName">
+                      <div class="b-wrapper-title">
+                        Имя
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{
+                        dataContactPerson?.OrganizationFiz?.pasport?.firstName
+                        }}
+                      </div>
+                    </div>
+  
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.pasport?.middleName">
+                      <div class="b-wrapper-title">
+                        Отчество
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{
+                        dataContactPerson?.OrganizationFiz?.pasport?.middleName
+                        }}
+                      </div>
+                    </div>
+  
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.pasport?.sex">
+                      <div class="b-wrapper-title">
+                        Пол
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{ dataContactPerson?.OrganizationFiz?.pasport?.sex }}
+                      </div>
+                    </div>
+  
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.pasport?.snils">
+                      <div class="b-wrapper-title">
+                        СНИЛС
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{ dataContactPerson?.OrganizationFiz?.pasport?.snils }}
+                      </div>
+                    </div>
+  
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.orgAddressFact">
+                      <div class="b-wrapper-title">
+                        Фактический адресс
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{ dataContactPerson?.OrganizationFiz?.orgAddressFact }}
+                      </div>
+                    </div>
+  
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.orgPhone">
+                      <div class="b-wrapper-title">
+                        Телефон
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{ dataContactPerson?.OrganizationFiz?.orgPhone }}
+                      </div>
+                    </div>
+  
+                    <div
+                      class="b-wrapper-line"
+                      *ngIf="dataContactPerson?.OrganizationFiz?.orgEmail">
+                      <div class="b-wrapper-title">
+                        Адрес электронной почты
+                        <div class="b-dot-element"></div>
+                      </div>
+                      <div class="b-wrapper-value">
+                        {{ dataContactPerson?.OrganizationFiz?.orgEmail }}
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="b-text b-text-title">Объект</div>
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataPassport?.passport?.objName">
+                    <div class="b-wrapper-title">
+                      Наименование объекта
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataPassport?.passport?.objName }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataPassport?.passport?.objCategoriesBuild">
+                    <div class="b-wrapper-title">
+                      Вид строительства
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataPassport?.passport?.objCategoriesBuild }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataPassport?.passport?.objFinSourse">
+                    <div class="b-wrapper-title">
+                      Источник финансирования
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataPassport?.passport?.objFinSourse }}
+                    </div>
+                  </div>
+  
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataPassport?.passport?.objectAddress?.objAddress">
+                    <div class="b-wrapper-title">
+                      Адресс
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataPassport?.passport?.objectAddress?.objAddress }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-sm-6 text-right">
+                <a class="btn btn-default" role="button" disabled>Назад</a>
+              </div>
+              <div class="col-sm-6 text-left">
+                <a class="btn btn-primary" role="button" (click)="selectTab(1)">Далее</a>
+              </div>
+            </div>
+            <!-- /.buttons -->
+          </tab>
+          <tab
+            *ngIf="formKey !== 'allowSolution' &&
+            formKey !== 'subscribeLetterRefusalDoc' &&
+            formKey !== 'printLetterRefusal' &&
+            formKey !== 'subscribeLetterRefusal'"heading="Решение"
+            id="tab2">
+            <div class="b-wrapper-tab">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="b-text b-text-title">Заявление принял</div>
+                  <div class="b-wrapper-line">
+                    <div class="b-wrapper-title">
+                      ФИО
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataMaterialCapital?.maternalCapital?.executor?.FIO }}
+                    </div>
+                  </div>
+                  <div class="b-wrapper-line">
+                    <div class="b-wrapper-title">
+                      Регистрационный номер
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{ dataMaterialCapital?.maternalCapital?.objAppNum }}
+                    </div>
+                  </div>
+                  <div class="b-wrapper-line">
+                    <div class="b-wrapper-title">
+                      Дата регистрации
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{
+                      dataMaterialCapital?.maternalCapital?.objAppDate
+                      | date: "dd.MM.yyyy"
+                      }}
+                    </div>
+                  </div>
+                  <div class="b-wrapper-line">
+                    <div class="b-wrapper-title">
+                      Плановая дата исполнения
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{
+                      dataMaterialCapital?.maternalCapital?.objPlanDate
+                      | date: "dd.MM.yyyy"
+                      }}
+                    </div>
+                  </div>
+                  <div class="b-text b-text-title">Решение</div>
+                  <div class="b-wrapper-line">
+                    <div class="b-wrapper-title">
+                      Заявление
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{
+                      dataMaterialCapital?.maternalCapital?.allowSol
+                      ?.objAllowSol
+                      }}
+                    </div>
+                  </div>
+                  <div
+                    class="b-wrapper-line"
+                    *ngIf="dataMaterialCapital?.maternalCapital?.allowSol
+                    ?.reasonForRefusal">
+                    <div class="b-wrapper-title">
+                      Причина отказа
+                      <div class="b-dot-element"></div>
+                    </div>
+                    <div class="b-wrapper-value">
+                      {{
+                      dataMaterialCapital?.maternalCapital?.allowSol
+                      ?.reasonForRefusal
+                      }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-sm-6 text-right">
+                <a class="btn btn-primary" role="button" (click)="selectTab(1)">Назад</a>
+              </div>
+              <div class="col-sm-6 text-left">
+                <a class="btn btn-primary" role="button" (click)="selectTab(3)">Далее</a>
+              </div>
+            </div>
+            <!-- /.buttons -->
+          </tab>
+  
+          <tab heading="Документы" id="tab3">
+            <br /><br />
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <!-- Электронный образ  -->
+                <div class="row form-group">
+                  <div class="col-sm-4">
+                    <div class="text-right item-title" (click)="checkFiles()">
+                      Электронный образ
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <cdp-ex-file-manager
+                      [folderGuid]="folderGUID"
+                      [(files)]="referenceFiles"
+                      [fileType]="'default'"
+                      [downloadable]="formKey === 'printLetterRefusal' ? false :
+                      true"[deletable]="formKey === 'printLetterRefusal' ? false :
+                      true"[checkSign]="true"
+                      [signable]="false"
+                      [openable]="true"
+                      [showSize]="true"
+                      [downloadBaseHref]="'/filestore'"
+                      [extPattern]="'doc, docx, pdf'"></cdp-ex-file-manager>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-sm-6 text-right">
+                <a
+                  class="btn btn-primary"
+                  role="button"
+                  (click)="formKey === 'printLetterRefusal' ? selectTab(0) :
+                  selectTab(0)">Назад</a>
+              </div>
+              <div class="col-sm-6 text-left">
+                <a
+                  class="btn btn-primary"
+                  role="button"
+                  (click)="formKey === 'printLetterRefusal' ? selectTab(2) :
+                  selectTab(2)">Далее</a>
+              </div>
+            </div>
+            <!-- /.buttons -->
+          </tab>
+  
+          <tab
+            *ngIf="formKey === 'printLetterRefusalDoc'"
+            heading="Документы"
+            id="tab4">
+            <app-tab-print-letter-refusal-doc
+              [fn]="selectTab"></app-tab-print-letter-refusal-doc>
+          </tab>
+  
+          <tab
+            *ngIf="formKey === 'allowSolution'"
+            heading="Решение"
+            id="tab4"
+            [active]="true">
+            <app-tab-allow-solution
+              [fn]="selectTab"
+              [form]="dataMaterialCapital"
+              [taskId]="task['id']"
+              [documentId]="documentId"></app-tab-allow-solution>
+          </tab>
+  
+          <tab
+            *ngIf="formKey === 'selectEmployee'"
+            heading="Делегирование"
+            id="tab4"
+            [active]="true">
+            <app-tab-select-employee
+              [fn]="selectTab"
+              [taskId]="task['id']"
+              [documentId]="documentId"
+              [dataMaterialCapital]="dataMaterialCapital"></app-tab-select-employee>
+          </tab>
+  
+          <tab
+            *ngIf="formKey === 'subscribeLetterRefusalDoc'"
+            heading="Решение"
+            id="tab4"
+            [active]="true">
+            <app-tab-subscribe-letter-refusal-doc
+              [fn]="selectTab"
+              [taskId]="task['id']"
+              [documentId]="documentId"
+              [referenceFiles]="referenceFiles"
+              [folderGUID]="folderGUID"
+              [dataMaterialCapital]="dataMaterialCapital"></app-tab-subscribe-letter-refusal-doc>
+          </tab>
+  
+          <tab
+            *ngIf="formKey === 'printLetterRefusal' ||
+            formKey === 'subscribeLetterRefusal'"heading="Решение"
+            id="tab4"
+            [active]="true">
+            <app-tab-print-letter-refusal
+              [fn]="selectTab"
+              [taskId]="task['id']"
+              [documentId]="documentId"
+              [dataMaterialCapital]="dataMaterialCapital"
+              [referenceFiles]="referenceFiles"
+              [formKey]="formKey"></app-tab-print-letter-refusal>
+          </tab>
+  
+          <tab
+            *ngIf="formKey === 'createPrintForm' || formKey ===
+            'subscribePrintForm'"heading="Акт"
+            [active]="true"
+            id="tab4">
+            <app-tab-create-print-form
+              [fn]="selectTab"
+              [taskId]="task['id']"
+              [documentId]="documentId"
+              [dataMaterialCapital]="dataMaterialCapital"
+              [referenceFiles]="referenceFiles"
+              [folderGUID]="folderGUID"
+              [formKey]="formKey"></app-tab-create-print-form>
+          </tab>
+        </tabset>
+      </div>
+    </div>
+  </div>
+  
